@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `environment` (
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+INSERT INTO `environment` (`Name`, `Commands`, `LastModified`, `Obsolete`) VALUES ('default', 'graph.out <- function(filename, drawfunction, size=c(600,600)) {\r\n graphics.off()\r\n filename <- job.filename(filename)\r\n CairoPNG(paste(filename, \'.png\', sep=\'\'), width=size[1], height=size[2])\r\n drawfunction()\r\n graphics.off()\r\n system(paste(\'gm\',\'convert\', \'-resize\', \'250x175\', paste(filename, \'.png\', sep=\'\'), paste(filename, \'-pre250.png\', sep=\'\')), intern=FALSE, wait=FALSE, ignore.stderr = TRUE)\r\n system(paste(\'gm\',\'convert\', \'-resize\', \'100x100\', paste(filename, \'.png\', sep=\'\'), paste(filename, \'-pre100.png\', sep=\'\')), intern=FALSE, wait=FALSE, ignore.stderr = TRUE)\r\n Cairo(type=\'pdf\', file=paste(filename, \'.pdf\', sep=\'\'), width=size[1]/3.5, height=size[2]/3.5, units="mm")\r\n drawfunction()\r\n graphics.off()\r\n}\r\n', '2012-05-24 16:25:08', 'N');
 
 
 -- Dumping structure for table R.jobs
