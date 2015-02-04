@@ -8,8 +8,16 @@ Required software
 - webserver with PHP
 - SQL server (ie MySQL)
 - R with packages DBI, RMySQL, Cairo
-- The example environment (defined in the .sql file) uses an existing GraphicsMagick installation to resize images (command: gm)
+- The example environment (defined in the .sql file) uses an existing GraphicsMagick installation to create preview images (command: gm)
 
+optional software:
+- HeidiSQL www.heidisql.com or similar to edit the database directly to create more execution environments
+- further R packages
+
+Notes
+-----
+- Deleting a job on the website does neither remove the entry from the database, nor delete the images. It only hides the job.
+- Sometimes R acts up, and stops running graphicsmagick. Restart the R server if this happens.
 
 Warning
 -------
