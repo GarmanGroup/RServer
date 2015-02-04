@@ -3,6 +3,14 @@ RServer
 
 A simple client/server web-application for running R scripts and logging and storing output and produced images
 
+Required software
+-----------------
+- webserver with PHP
+- SQL server (ie MySQL)
+- R with packages DBI, RMySQL, Cairo
+- The example environment (defined in the .sql file) uses an existing GraphicsMagick installation to resize images (command: gm)
+
+
 Warning
 -------
 Do *not* run this on a publically accessible webserver.
