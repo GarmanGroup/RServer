@@ -1,0 +1,2 @@
+#!/bin/bash
+su -c "R -q --slave --vanilla -f rserver" rbatch
