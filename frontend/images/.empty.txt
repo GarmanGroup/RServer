@@ -1,0 +1,1 @@
+folder for R images. Make sure the R user can write into this folder
